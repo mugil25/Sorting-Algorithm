@@ -19,7 +19,24 @@ To write a program to perform selection sort and insertion sort using python pro
 5.	Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Program:
 i)	#Selection Sort
-```
+```Python
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: Mugil
+RegisterNumber: 23008346
+'''
+def selection_sort(nums):
+    for i in range (len(nums)):
+        lowest_value_index=i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[lowest_value_index]:
+                lowest_value_index=j
+        nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
+# use the selection sort function
+# print the sorted list
 
 
 
@@ -27,7 +44,25 @@ i)	#Selection Sort
 
 ```
 ii)	#Insertion Sort
-```
+```python
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: Mugil
+RegisterNumber: 23008346
+'''
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        items_to_insert=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>items_to_insert:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=items_to_insert
+list_of_nums=eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
+   
+
 
 
 
@@ -37,6 +72,12 @@ ii)	#Insertion Sort
 ```
 
 ## Output:
+1.Write a program to sort the elements in the list using the Selection Sort algorithm.
+![image](https://github.com/mugil25/Sorting-Algorithm/assets/148515771/570e0cbd-0471-400f-84e9-36e38e7b0b77)
+
+
+2.Write a program to sort the elements in the list using the Insertion Sort algorithm.
+![image](https://github.com/mugil25/Sorting-Algorithm/assets/148515771/62598798-95aa-4a0f-9e8a-676ce37cbe2b)
 
 
 ## Result:
